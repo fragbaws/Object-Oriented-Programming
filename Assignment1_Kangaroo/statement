@@ -1,0 +1,22 @@
+Student number: 16312903
+Name: Nikolaj Jasenko
+E-mail: nikolaj.jasenko@ucdconnect.ie
+
+⬤ For Assignment 1 we were meant to create a simulation of the game "Will Skippy Get Home?".
+⬤ My attempt at this simulation works perfectly for any dimension of the grid.
+⬤ The user needs to input the dimension of the grid and this is followed by the console showing the user each move Skippy makes.
+⬤ The console can point out if Skippy's next move will make an 'out-of-bounds' move, and let's the user know when 
+   Skippy reaches his destination.
+⬤ Once the program finishes running, the statistics of the simulation show
+     1) the number of hops Skippy makes
+     2) total number of throws the die made
+     3) total number of times each side of the die (north, east, south, west) occured
+     
+     
+                 MMP""MM""YMM `7MM                             `7MM          `YMM'   `MM'  .g8""8q.   `7MMF'   `7MF' OO 
+                P'   MM   `7   MM                               MM            VMA   ,V  .dP'    `YM.   MM       M   88 
+                     MM        MMpMMMb.   ,6"Yb.  `7MMpMMMb.    MM  ,MP'       VMA ,V   dM'      `MM   MM       M   || 
+                     MM        MM    MM  8)   MM    MM    MM    MM ;Y           VMMP    MM        MM   MM       M   || 
+                     MM        MM    MM   ,pm9MM    MM    MM    MM;Mm            MM     MM.      ,MP   MM       M   `' 
+                     MM        MM    MM  8M   MM    MM    MM    MM `Mb.          MM     `Mb.    ,dP'   YM.     ,M   ,, 
+                   .JMML.    .JMML  JMML.`Moo9^Yo..JMML  JMML..JMML. YA.       .JMML.     `"bmmd"'      `bmmmmd"'   db 
