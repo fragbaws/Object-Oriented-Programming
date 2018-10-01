@@ -3,8 +3,6 @@ require_relative 'point.rb'
 require_relative 'grid.rb'
 require_relative 'kangaroo.rb'
 
-
-
   puts "Enter dimension of grid >= 1"
   dimension = gets.to_i
 
