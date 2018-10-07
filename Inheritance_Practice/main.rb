@@ -8,4 +8,4 @@ aoife = Manager.new('Aoife', 50, 12, 100,321)
 kyle = Volunteer.new("Kyle", 1234,30,0,"NCVL")
 puts john.to_s
 puts aoife.to_s
-puts kyle.employee.to_s
+puts kyle.to_s
