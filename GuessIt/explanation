@@ -1,0 +1,5 @@
+The GuessIt game works as follows. An oracle chooses a secret integer number
+randomly in some range (say 1..100). The role of the player is then to try to guess
+what the number is. When a player makes a guess, the oracle responds by
+informing the player if they are correct or not. If they are not correct, the game
+continues, otherwise it ends
