@@ -56,8 +56,8 @@ class Hand
 
   def rank
     curr_rank = 0
-    for i in 0..@cards.size-1 do
 
+    for i in 0..@cards.size-1 do
       new_rank = 0
       stop = false
       curr_card = @cards[i]
@@ -66,7 +66,7 @@ class Hand
       while !stop
         next_card = @cards[j]
         if curr_card.kind == next_card.kind
-          new_rank+=1
+          new_rank = new_rank + 1
         end
         j = (j+1)%(@cards.size)
 
@@ -78,10 +78,10 @@ class Hand
         end
       end
 
-      curr_rank
+
     end
 
-    rank
+    curr_rank
 
   end
 
