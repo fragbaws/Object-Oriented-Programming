@@ -46,7 +46,26 @@ while count <= 52
   count+=1
 end
 
+count = 0
+found = false
 
-pack.array.each do |card|
-  puts card.to_s
+while !found
+  first_card = pack.pick_random
+  second_card = pack.pick_random
+  third_card = pack.pick_random
+  count+=1
+
+  if first_card.kind == second_card.kind && first_card.kind == third_card.kind
+    found = true
+  else
+    pack.add first_card
+    pack.add second_card
+    pack.add third_card
+  end
 end
+
+puts "Found three #{first_card.kind} after #{count} attempts"
+puts first_card.to_s
+puts second_card.to_s
+puts third_card.to_s
+
