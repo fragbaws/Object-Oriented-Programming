@@ -129,7 +129,6 @@ hands = []
   hands[i].cards = pack.deal_hand
 end
 
-
 hands.sort!{|a,b| b<=>a}
 
 hands.each do |hand|
