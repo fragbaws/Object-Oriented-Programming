@@ -78,12 +78,12 @@ class Hand
         end
       end
 
-
     end
 
     curr_rank
 
   end
+
 
   def <=> other
     rank <=> other.rank
@@ -124,10 +124,13 @@ puts second_card.to_s
 puts third_card.to_s
 
 hands = []
-5.times do |i|
+4.times do |i|
   hands[i] = Hand.new
   hands[i].cards = pack.deal_hand
 end
+
+
+hands.sort!{|a,b| b<=>a}
 
 hands.each do |hand|
   puts "\n"
@@ -136,6 +139,7 @@ hands.each do |hand|
   end
   puts "Rank = #{hand.rank}"
 end
+
 
 
 
