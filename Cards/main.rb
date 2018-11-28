@@ -35,6 +35,24 @@ class Pack
     @array.delete card
     card
   end
+
+  def deal_hand
+    cards = []
+    1.upto(5) do
+      cards.push pick_random
+    end
+    cards
+  end
+end
+
+class Hand
+
+  attr_accessor :cards
+
+  def initialize
+    @cards = []
+  end
+
 end
 
 rand = Random.new
@@ -68,4 +86,19 @@ puts "Found three #{first_card.kind} after #{count} attempts"
 puts first_card.to_s
 puts second_card.to_s
 puts third_card.to_s
+
+hands = []
+5.times do |i|
+  hands[i] = Hand.new
+  hands[i].cards = pack.deal_hand
+end
+
+hands.each do |hand|
+  puts "\n"
+  hand.cards.each do |card|
+    puts card.to_s
+  end
+end
+
+
 
