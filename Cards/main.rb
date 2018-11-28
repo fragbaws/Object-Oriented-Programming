@@ -14,12 +14,39 @@ class Card
   end
 end
 
-attempts = 0
-rand = Random.new
-card = Card.new(SUITS[rand(SUITS.size)], KINDS[rand(KINDS.size)])
-while (card.suit != "Hearts" || card.kind != "Jack")
-  card = Card.new(SUITS[rand(SUITS.length)], KINDS[rand(KINDS.length)])
-  attempts+=1
+class Pack
+
+  attr_reader :array
+  def initialize
+    @array = []
+  end
+
+  def add card
+    @array.push card
+  end
+
+  def remove card
+    @array.delete card
+  end
+
+  def pick_random
+    rand = Random.new
+    card = @array[rand(@array.size)]
+    @array.delete card
+    card
+  end
 end
 
-puts "Found #{card.to_s} after #{attempts} attempts"
+rand = Random.new
+pack = Pack.new
+count = 0
+
+while count <= 52
+  pack.add Card.new(SUITS[rand(SUITS.length)], KINDS[rand(KINDS.length)])
+  count+=1
+end
+
+
+pack.array.each do |card|
+  puts card.to_s
+end
