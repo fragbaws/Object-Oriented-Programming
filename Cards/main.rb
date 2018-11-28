@@ -47,10 +47,46 @@ end
 
 class Hand
 
+  include Comparable
   attr_accessor :cards
 
   def initialize
     @cards = []
+  end
+
+  def rank
+    curr_rank = 0
+    for i in 0..@cards.size-1 do
+
+      new_rank = 0
+      stop = false
+      curr_card = @cards[i]
+      j = (i+1)%(@cards.size)
+
+      while !stop
+        next_card = @cards[j]
+        if curr_card.kind == next_card.kind
+          new_rank+=1
+        end
+        j = (j+1)%(@cards.size)
+
+        if j == i
+          if new_rank > curr_rank
+            curr_rank = new_rank
+          end
+          stop = true
+        end
+      end
+
+      curr_rank
+    end
+
+    rank
+
+  end
+
+  def <=> other
+    rank <=> other.rank
   end
 
 end
@@ -98,7 +134,9 @@ hands.each do |hand|
   hand.cards.each do |card|
     puts card.to_s
   end
+  puts "Rank = #{hand.rank}"
 end
+
 
 
 
